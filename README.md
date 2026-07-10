@@ -127,6 +127,7 @@ Set the R working directory to that directory and run:
 
 ```r
 source("gamm_pipeline_main.R")
+```
 
 The script will:
 
@@ -137,45 +138,45 @@ The script will:
 5. Fit Supplementary Models S1–S4.
 6. Generate model summaries, predicted waveforms, difference waveforms, confidence intervals, and figures.
 
-Outputs
+### Outputs
 
 All outputs are saved in a time-stamped output directory created by the script.
 
 The output directory may include:
 
-* Model summaries.
-* Estimated AR(1) parameters.
-* Predicted pupillary response waveforms.
-* Difference waveforms.
-* Pointwise and simultaneous confidence intervals.
-* Statistical result tables.
-* Figures generated from the fitted models.
+- Model summaries.
+- Estimated AR(1) parameters.
+- Predicted pupillary response waveforms.
+- Difference waveforms.
+- Pointwise and simultaneous confidence intervals.
+- Statistical result tables.
+- Figures generated from the fitted models.
 
-5. Version Information
+## 5. Version Information
 
-Corrected Release
+### Corrected Release
 
-This release corrects the model-refitting procedure in gamm_pipeline_main.R.
+This release corrects the model-refitting procedure in `gamm_pipeline_main.R`.
 
-In the earlier release, the use of update() could cause objects defined locally during model construction to become unavailable when the stored model call was reevaluated. In the corrected script, the AR(1) models are fitted directly using the completed model formula.
+In the earlier release, the use of `update()` could cause objects defined locally during model construction to become unavailable when the stored model call was reevaluated. In the corrected script, the AR(1) models are fitted directly using the completed model formula.
 
 The following elements are unchanged:
 
-* The dataset.
-* The analyzed variables.
-* The model structure.
-* The statistical results.
-* The figures.
-* The interpretations and conclusions of the published article.
+- The dataset.
+- The analyzed variables.
+- The model structure.
+- The statistical results.
+- The figures.
+- The interpretations and conclusions of the published article.
 
-6. License
+## 6. License
 
 The dataset is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
 The analysis code is licensed under the MIT License.
 
-Contact
+## Contact
 
-Kei Kanari
-Tohoku University
+Kei Kanari  
+Tohoku University  
 Email: kei.kanari.a2@tohoku.ac.jp
